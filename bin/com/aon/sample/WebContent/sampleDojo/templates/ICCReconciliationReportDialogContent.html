@@ -1,0 +1,69 @@
+<div >
+	<table align="center" cellspacing="10" width="90%">
+		<tr>
+			<td>
+				<span data-dojo-attach-point="fromUIDLabel" data-dojo-type="dijit/form/TextBox" readOnly="true" style=" border:none;" disabled="false"></span>
+				<input id="${id}_fromUIDtb" data-dojo-attach-point="fromUIDtb"  data-dojo-type="dijit/form/ValidationTextBox" required="true" data-dojo-attach-event="onKeyUp:_onValueEnteredTB" missingMessage="Enter From User ID"> </input>
+				<label id="fromUserName"></label>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span data-dojo-attach-point="toUIDLabel" data-dojo-type="dijit/form/TextBox" readOnly="true" style=" border:none;" disabled="false"></span>
+				<input id="${id}_toUIDtb" data-dojo-attach-point="toUIDtb"  data-dojo-type="dijit/form/ValidationTextBox" required="true" data-dojo-attach-event="onKeyUp:_onValueEnteredTB" missingMessage="Enter To User ID"> </input>
+				<label id="toUserName"></label>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span data-dojo-attach-point="workflowTypeLabel" data-dojo-type="dijit/form/TextBox" readOnly="true" style=" border:none;" disabled="false"></span>
+				<input id="${id}_workflowTypeLabelSelect" data-dojo-attach-point="workflowTypeSelect"> </input>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;
+				<button data-dojo-attach-point="getDetailsButton" data-dojo-type="dijit/form/Button" data-dojo-attach-event="onClick:_getWorkflowDetails" >
+					GetDetails
+				</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<button  data-dojo-attach-point="resetButton" data-dojo-type="dijit/form/Button" data-dojo-attach-event="onClick:_customReset">
+					Reset
+				</button>
+			</td>
+		</tr>
+		<br>
+	</table>
+</div>
+<br>
+<div id="wfMessageDiv">
+	<hr>
+	<table align="center"  cellspacing="10" width="90%">
+		<tr>
+			<td>
+				<span data-dojo-attach-point="messageLabel" data-dojo-type="dijit/form/TextBox" readOnly="true" style=" border:none;" disabled="false"></span>
+				<label id="responsemessage"></label>
+			</td>
+		</tr>
+	</table>
+	<hr><br>
+</div>
+<div id="wfReassignDiv">
+	<table align="center"  cellspacing="10" width="90%">
+		<tr>
+			<td>
+				<span data-dojo-attach-point="ReassignCountLabel" data-dojo-type="dijit/form/TextBox" readOnly="true" style=" border:none;" disabled="false"></span>
+				<input data-dojo-attach-point="reassignCounttb" id="${id}_ReassignCounttb" data-dojo-type="dijit/form/NumberTextBox" data-dojo-attach-event="onKeyUp:_onValueEnteredreassignTb" required="true" data-dojo-props="constraints:{min:1,max:500,places:0},
+    invalidMessage:'Please enter a numeric value.',
+    rangeMessage:'Min : 1 and Max : 500 '"> </input>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;
+				<button data-dojo-attach-point="reassignButton" data-dojo-type="dijit/form/Button" data-dojo-attach-event="onClick:_reassignWorkFlow" >
+					Reassign
+				</button>
+			</td>
+		</tr>
+	</table>
+</div>
